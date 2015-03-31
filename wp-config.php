@@ -16,7 +16,7 @@
 
 // ** Ajustes de MySQL. Solicita estos datos a tu proveedor de alojamiento web. ** //
 /** El nombre de tu base de datos de WordPress */
-define('DB_NAME', 'AkoyaSv');
+define('DB_NAME', 'wp_akoyasv');
 
 /** Tu nombre de usuario de MySQL */
 define('DB_USER', 'root');
