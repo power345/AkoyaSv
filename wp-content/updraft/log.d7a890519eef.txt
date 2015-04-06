@@ -1,0 +1,212 @@
+0000.002 (0) Opened log file at time: Mon, 06 Apr 2015 21:09:09 +0000 on http://localhost/AkoyaSv
+0000.009 (0) UpdraftPlus WordPress backup plugin (http://updraftplus.com): 1.9.63 WP: 4.1.1 PHP: 5.5.12 (Windows NT LIEISON 6.2 build 9200 (Windows 8 Business Edition) i586) MySQL: 5.6.17 Server: Apache/2.4.9 (Win32) PHP/5.5.12 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 34.7M | 35.3M) multisite: N mcrypt: Y LANG:  ZipArchive::addFile: Y
+0000.012 (0) Free space on disk containing Updraft's temporary directory: 41577 Mb
+0000.023 (0) Tasks: Backup files: 0 (schedule: unset) Backup DB: 1 (schedule: unset)
+0000.032 (0) Requesting semaphore lock (d)
+0000.036 (0) Set semaphore last lock (d) time to 2015-04-06 21:09:09
+0000.039 (0) Semaphore lock (d) complete
+0000.049 (0) Backup run: resumption=0, nonce=d7a890519eef, begun at=1428354549 (0s ago), job type=backup
+0000.052 (0) Scheduling a resumption (1) after 300 seconds (1428354849) in case this run gets aborted
+0000.076 (0) This backup run is not intended for files - skipping
+0000.078 (0) Beginning creation of database dump (WordPress DB)
+0000.119 (0) Table wp_options: Total expected rows (approximate): 482
+0000.299 (0) Table wp_options: Total rows added: 481 in 0.18 seconds
+0000.303 (0) Table wp_options: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_options.table.gz - 91.8 Kb)
+0000.317 (0) Table wp_users: Total expected rows (approximate): 1
+0000.330 (0) Table wp_users: Total rows added: 1 in 0.01 seconds
+0000.333 (0) Table wp_users: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_users.table.gz - 0.5 Kb)
+0000.347 (0) Table wp_usermeta: Total expected rows (approximate): 44
+0000.372 (0) Table wp_usermeta: Total rows added: 44 in 0.02 seconds
+0000.375 (0) Table wp_usermeta: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_usermeta.table.gz - 1.4 Kb)
+0000.387 (0) Table wp_commentmeta: Total expected rows (approximate): 67
+0000.405 (0) Table wp_commentmeta: Total rows added: 67 in 0.02 seconds
+0000.408 (0) Table wp_commentmeta: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_commentmeta.table.gz - 0.9 Kb)
+0000.420 (0) Table wp_comments: Total expected rows (approximate): 71
+0000.457 (0) Table wp_comments: Total rows added: 71 in 0.04 seconds
+0000.476 (0) Table wp_comments: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_comments.table.gz - 4 Kb)
+0000.488 (0) Table wp_links: Total expected rows (approximate): 0
+0000.528 (0) Table wp_links: Total rows added: 0 in 0.04 seconds
+0000.531 (0) Table wp_links: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_links.table.gz - 0.4 Kb)
+0000.546 (0) Table wp_postmeta: Total expected rows (approximate): 17253
+0002.611 (0) Table wp_postmeta: Total rows added: 17253 in 2.06 seconds
+0002.622 (0) Table wp_postmeta: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_postmeta.table.gz - 94.6 Kb)
+0002.634 (0) Table wp_posts: Total expected rows (approximate): 376
+0002.994 (0) Table wp_posts: Total rows added: 376 in 0.36 seconds
+0002.998 (0) Table wp_posts: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_posts.table.gz - 40.3 Kb)
+0003.011 (0) Table wp_term_relationships: Total expected rows (approximate): 298
+0003.037 (0) Table wp_term_relationships: Total rows added: 298 in 0.02 seconds
+0003.040 (0) Table wp_term_relationships: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_term_relationships.table.gz - 1.1 Kb)
+0003.054 (0) Table wp_term_taxonomy: Total expected rows (approximate): 56
+0003.073 (0) Table wp_term_taxonomy: Total rows added: 56 in 0.02 seconds
+0003.077 (0) Table wp_term_taxonomy: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_term_taxonomy.table.gz - 0.8 Kb)
+0003.112 (0) Table wp_terms: Total expected rows (approximate): 56
+0003.301 (0) Table wp_terms: Total rows added: 56 in 0.19 seconds
+0003.305 (0) Table wp_terms: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_terms.table.gz - 0.9 Kb)
+0003.317 (0) Table wp_woocommerce_order_itemmeta: Total expected rows (approximate): 0
+0003.329 (0) Table wp_woocommerce_order_itemmeta: Total rows added: 0 in 0.01 seconds
+0003.333 (0) Table wp_woocommerce_order_itemmeta: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_woocommerce_order_itemmeta.table.gz - 0.3 Kb)
+0003.346 (0) Table wp_woocommerce_termmeta: Total expected rows (approximate): 47
+0003.407 (0) Table wp_woocommerce_termmeta: Total rows added: 47 in 0.06 seconds
+0003.411 (0) Table wp_woocommerce_termmeta: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_woocommerce_termmeta.table.gz - 0.6 Kb)
+0003.424 (0) Table wp_icl_cms_nav_cache: Total expected rows (approximate): 0
+0003.440 (0) Table wp_icl_cms_nav_cache: Total rows added: 0 in 0.01 seconds
+0003.443 (0) Table wp_icl_cms_nav_cache: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_cms_nav_cache.table.gz - 0.3 Kb)
+0003.476 (0) Table wp_icl_content_status: Total expected rows (approximate): 0
+0003.510 (0) Table wp_icl_content_status: Total rows added: 0 in 0.03 seconds
+0003.513 (0) Table wp_icl_content_status: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_content_status.table.gz - 0.3 Kb)
+0003.529 (0) Table wp_icl_core_status: Total expected rows (approximate): 0
+0003.539 (0) Table wp_icl_core_status: Total rows added: 0 in 0.01 seconds
+0003.543 (0) Table wp_icl_core_status: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_core_status.table.gz - 0.3 Kb)
+0003.558 (0) Table wp_icl_flags: Total expected rows (approximate): 64
+0003.579 (0) Table wp_icl_flags: Total rows added: 64 in 0.02 seconds
+0003.582 (0) Table wp_icl_flags: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_flags.table.gz - 0.8 Kb)
+0003.595 (0) Table wp_icl_languages: Total expected rows (approximate): 64
+0003.619 (0) Table wp_icl_languages: Total rows added: 64 in 0.02 seconds
+0003.623 (0) Table wp_icl_languages: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_languages.table.gz - 1.5 Kb)
+0003.637 (0) Table wp_icl_languages_translations: Total expected rows (approximate): 3557
+0004.322 (0) Table wp_icl_languages_translations: Total rows added: 3557 in 0.68 seconds
+0004.325 (0) Table wp_icl_languages_translations: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_languages_translations.table.gz - 27.6 Kb)
+0004.342 (0) Table wp_icl_locale_map: Total expected rows (approximate): 0
+0004.355 (0) Table wp_icl_locale_map: Total rows added: 0 in 0.01 seconds
+0004.358 (0) Table wp_icl_locale_map: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_locale_map.table.gz - 0.3 Kb)
+0004.374 (0) Table wp_icl_message_status: Total expected rows (approximate): 0
+0004.387 (0) Table wp_icl_message_status: Total rows added: 0 in 0.01 seconds
+0004.391 (0) Table wp_icl_message_status: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_message_status.table.gz - 0.4 Kb)
+0004.405 (0) Table wp_icl_node: Total expected rows (approximate): 0
+0004.419 (0) Table wp_icl_node: Total rows added: 0 in 0.01 seconds
+0004.423 (0) Table wp_icl_node: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_node.table.gz - 0.3 Kb)
+0004.437 (0) Table wp_icl_reminders: Total expected rows (approximate): 0
+0004.454 (0) Table wp_icl_reminders: Total rows added: 0 in 0.01 seconds
+0004.457 (0) Table wp_icl_reminders: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_reminders.table.gz - 0.3 Kb)
+0004.471 (0) Table wp_icl_string_positions: Total expected rows (approximate): 0
+0004.481 (0) Table wp_icl_string_positions: Total rows added: 0 in 0.01 seconds
+0004.484 (0) Table wp_icl_string_positions: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_string_positions.table.gz - 0.3 Kb)
+0004.504 (0) Table wp_icl_string_status: Total expected rows (approximate): 0
+0004.521 (0) Table wp_icl_string_status: Total rows added: 0 in 0.02 seconds
+0004.525 (0) Table wp_icl_string_status: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_string_status.table.gz - 0.3 Kb)
+0004.564 (0) Table wp_icl_string_translations: Total expected rows (approximate): 0
+0004.577 (0) Table wp_icl_string_translations: Total rows added: 0 in 0.01 seconds
+0004.580 (0) Table wp_icl_string_translations: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_string_translations.table.gz - 0.4 Kb)
+0004.595 (0) Table wp_icl_strings: Total expected rows (approximate): 0
+0004.608 (0) Table wp_icl_strings: Total rows added: 0 in 0.01 seconds
+0004.611 (0) Table wp_icl_strings: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_strings.table.gz - 0.4 Kb)
+0004.627 (0) Table wp_icl_translate: Total expected rows (approximate): 0
+0004.640 (0) Table wp_icl_translate: Total rows added: 0 in 0.01 seconds
+0004.643 (0) Table wp_icl_translate: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_translate.table.gz - 0.4 Kb)
+0004.658 (0) Table wp_icl_translate_job: Total expected rows (approximate): 0
+0004.669 (0) Table wp_icl_translate_job: Total rows added: 0 in 0.01 seconds
+0004.672 (0) Table wp_icl_translate_job: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_translate_job.table.gz - 0.3 Kb)
+0004.686 (0) Table wp_icl_translation_status: Total expected rows (approximate): 0
+0004.700 (0) Table wp_icl_translation_status: Total rows added: 0 in 0.01 seconds
+0004.703 (0) Table wp_icl_translation_status: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_translation_status.table.gz - 0.4 Kb)
+0004.730 (0) Table wp_icl_translations: Total expected rows (approximate): 0
+0004.740 (0) Table wp_icl_translations: Total rows added: 0 in 0.01 seconds
+0004.743 (0) Table wp_icl_translations: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_translations.table.gz - 0.4 Kb)
+0004.757 (0) Table wp_nf_objectmeta: Total expected rows (approximate): 82
+0004.778 (0) Table wp_nf_objectmeta: Total rows added: 82 in 0.02 seconds
+0004.781 (0) Table wp_nf_objectmeta: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_nf_objectmeta.table.gz - 1.1 Kb)
+0004.794 (0) Table wp_nf_objects: Total expected rows (approximate): 5
+0004.805 (0) Table wp_nf_objects: Total rows added: 5 in 0.01 seconds
+0004.809 (0) Table wp_nf_objects: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_nf_objects.table.gz - 0.3 Kb)
+0004.828 (0) Table wp_nf_relationships: Total expected rows (approximate): 3
+0004.850 (0) Table wp_nf_relationships: Total rows added: 3 in 0.02 seconds
+0004.853 (0) Table wp_nf_relationships: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_nf_relationships.table.gz - 0.4 Kb)
+0004.867 (0) Table wp_ninja_forms_fav_fields: Total expected rows (approximate): 17
+0004.884 (0) Table wp_ninja_forms_fav_fields: Total rows added: 17 in 0.01 seconds
+0004.888 (0) Table wp_ninja_forms_fav_fields: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_ninja_forms_fav_fields.table.gz - 2.6 Kb)
+0004.909 (0) Table wp_ninja_forms_fields: Total expected rows (approximate): 8
+0004.921 (0) Table wp_ninja_forms_fields: Total rows added: 8 in 0.01 seconds
+0004.925 (0) Table wp_ninja_forms_fields: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_ninja_forms_fields.table.gz - 1.1 Kb)
+0004.939 (0) Table wp_social_users: Total expected rows (approximate): 0
+0004.948 (0) Table wp_social_users: Total rows added: 0 in 0.01 seconds
+0004.951 (0) Table wp_social_users: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_social_users.table.gz - 0.3 Kb)
+0004.965 (0) Table wp_taxonomymeta: Total expected rows (approximate): 0
+0004.976 (0) Table wp_taxonomymeta: Total rows added: 0 in 0.01 seconds
+0004.979 (0) Table wp_taxonomymeta: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_taxonomymeta.table.gz - 0.3 Kb)
+0004.992 (0) Table wp_woocommerce_attribute_taxonomies: Total expected rows (approximate): 0
+0005.031 (0) Table wp_woocommerce_attribute_taxonomies: Total rows added: 0 in 0.04 seconds
+0005.034 (0) Table wp_woocommerce_attribute_taxonomies: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_woocommerce_attribute_taxonomies.table.gz - 0.3 Kb)
+0005.054 (0) Table wp_woocommerce_downloadable_product_permissions: Total expected rows (approximate): 0
+0005.074 (0) Table wp_woocommerce_downloadable_product_permissions: Total rows added: 0 in 0.02 seconds
+0005.077 (0) Table wp_woocommerce_downloadable_product_permissions: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_woocommerce_downloadable_product_permissions.table.gz - 0.4 Kb)
+0005.092 (0) Table wp_woocommerce_order_items: Total expected rows (approximate): 0
+0005.105 (0) Table wp_woocommerce_order_items: Total rows added: 0 in 0.01 seconds
+0005.108 (0) Table wp_woocommerce_order_items: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_woocommerce_order_items.table.gz - 0.3 Kb)
+0005.122 (0) Table wp_woocommerce_tax_rate_locations: Total expected rows (approximate): 0
+0005.133 (0) Table wp_woocommerce_tax_rate_locations: Total rows added: 0 in 0.01 seconds
+0005.137 (0) Table wp_woocommerce_tax_rate_locations: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_woocommerce_tax_rate_locations.table.gz - 0.3 Kb)
+0005.150 (0) Table wp_woocommerce_tax_rates: Total expected rows (approximate): 0
+0005.161 (0) Table wp_woocommerce_tax_rates: Total rows added: 0 in 0.01 seconds
+0005.164 (0) Table wp_woocommerce_tax_rates: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_woocommerce_tax_rates.table.gz - 0.4 Kb)
+0005.178 (0) Table wp_yith_wcwl: Total expected rows (approximate): 0
+0005.190 (0) Table wp_yith_wcwl: Total rows added: 0 in 0.01 seconds
+0005.204 (0) Table wp_yith_wcwl: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_yith_wcwl.table.gz - 0.3 Kb)
+0005.321 (0) Table wp_yith_wcwl_lists: Total expected rows (approximate): 1
+0005.352 (0) Table wp_yith_wcwl_lists: Total rows added: 1 in 0.03 seconds
+0005.355 (0) Table wp_yith_wcwl_lists: finishing file (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_yith_wcwl_lists.table.gz - 0.4 Kb)
+0005.366 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_options.table.gz (1/45): adding to final database dump
+0005.439 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_users.table.gz (2/45): adding to final database dump
+0005.443 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_usermeta.table.gz (3/45): adding to final database dump
+0005.447 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_commentmeta.table.gz (4/45): adding to final database dump
+0005.453 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_comments.table.gz (5/45): adding to final database dump
+0005.460 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_links.table.gz (6/45): adding to final database dump
+0005.464 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_postmeta.table.gz (7/45): adding to final database dump
+0005.872 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_posts.table.gz (8/45): adding to final database dump
+0005.901 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_term_relationships.table.gz (9/45): adding to final database dump
+0005.909 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_term_taxonomy.table.gz (10/45): adding to final database dump
+0005.913 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_terms.table.gz (11/45): adding to final database dump
+0005.918 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_woocommerce_order_itemmeta.table.gz (12/45): adding to final database dump
+0005.921 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_woocommerce_termmeta.table.gz (13/45): adding to final database dump
+0005.925 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_cms_nav_cache.table.gz (14/45): adding to final database dump
+0005.929 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_content_status.table.gz (15/45): adding to final database dump
+0005.932 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_core_status.table.gz (16/45): adding to final database dump
+0005.936 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_flags.table.gz (17/45): adding to final database dump
+0005.941 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_languages.table.gz (18/45): adding to final database dump
+0005.945 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_languages_translations.table.gz (19/45): adding to final database dump
+0006.085 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_locale_map.table.gz (20/45): adding to final database dump
+0006.108 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_message_status.table.gz (21/45): adding to final database dump
+0006.111 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_node.table.gz (22/45): adding to final database dump
+0006.115 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_reminders.table.gz (23/45): adding to final database dump
+0006.118 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_string_positions.table.gz (24/45): adding to final database dump
+0006.121 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_string_status.table.gz (25/45): adding to final database dump
+0006.124 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_string_translations.table.gz (26/45): adding to final database dump
+0006.128 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_strings.table.gz (27/45): adding to final database dump
+0006.131 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_translate.table.gz (28/45): adding to final database dump
+0006.135 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_translate_job.table.gz (29/45): adding to final database dump
+0006.138 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_translation_status.table.gz (30/45): adding to final database dump
+0006.142 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_icl_translations.table.gz (31/45): adding to final database dump
+0006.145 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_nf_objectmeta.table.gz (32/45): adding to final database dump
+0006.149 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_nf_objects.table.gz (33/45): adding to final database dump
+0006.153 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_nf_relationships.table.gz (34/45): adding to final database dump
+0006.156 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_ninja_forms_fav_fields.table.gz (35/45): adding to final database dump
+0006.160 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_ninja_forms_fields.table.gz (36/45): adding to final database dump
+0006.164 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_social_users.table.gz (37/45): adding to final database dump
+0006.167 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_taxonomymeta.table.gz (38/45): adding to final database dump
+0006.171 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_woocommerce_attribute_taxonomies.table.gz (39/45): adding to final database dump
+0006.174 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_woocommerce_downloadable_product_permissions.table.gz (40/45): adding to final database dump
+0006.177 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_woocommerce_order_items.table.gz (41/45): adding to final database dump
+0006.180 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_woocommerce_tax_rate_locations.table.gz (42/45): adding to final database dump
+0006.183 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_woocommerce_tax_rates.table.gz (43/45): adding to final database dump
+0006.186 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_yith_wcwl.table.gz (44/45): adding to final database dump
+0006.190 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db-table-wp_yith_wcwl_lists.table.gz (45/45): adding to final database dump
+0006.194 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db.gz: finished writing out complete database file (248 Kb)
+0006.220 (0) Total database tables backed up: 45 (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db.gz, size: 279103, checksum (SHA1): f659b55bd192fd3c59eb7e851b79cc0f1bc8030e)
+0006.224 (0) Saving backup history
+0006.238 (0) backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db.gz: db: This file has not yet been successfully uploaded: will queue
+0006.243 (0) Requesting upload of the files that have not yet been successfully uploaded (1)
+0006.250 (0) Cloud backup selection (1/1): none (last)
+0006.252 (0) No remote despatch: user chose no remote backup service
+0006.256 (0) Recording as successfully uploaded: backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db.gz (5334af831ef37824bda155c182a31b8e)
+0006.267 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0006.270 (0) Number of backup sets in history: 1
+0006.274 (0) Examining backup set with datestamp: 1428354549 (Apr 06 2015 21:09:09)
+0006.277 (0) 1428354549: db: this set includes a database (backup_2015-04-06-2109_AkoyaSv_d7a890519eef-db.gz); db count is now 1
+0006.281 (0) 1428354549: this backup set remains non-empty (0/1); will retain in history
+0006.283 (0) Retain: saving new backup history (sets now: 1) and finishing retain operation
+0006.286 (0) Resume backup (d7a890519eef, 0): finish run
+0006.290 (0) Decremented the semaphore (d) by 1
+0006.293 (0) Semaphore (d) unlocked
+0006.295 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0006.302 (0) The backup apparently succeeded and is now complete
+0006.306 (0) No email will/can be sent - the user has not configured an email address.
+0006.308 (0) El respaldo parece haber tenido éxito y ahora está completado
